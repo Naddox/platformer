@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckyf6mh4b7lnk"]
+
+[ext_resource type="Texture2D" uid="uid://3hgwm327fjrd" path="res://assets/sprites/xbox-joystick.png" id="1_8wm1a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klpmd"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(0, 0, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdbah"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(22, 0, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kmti"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(44, 0, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4bp8"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(44, 22, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pye2q"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(44, 44, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vapt1"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(22, 44, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vibe2"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(0, 44, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6hq0"]
+atlas = ExtResource("1_8wm1a")
+region = Rect2(0, 22, 22, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5h5q1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klpmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdbah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kmti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4bp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pye2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vapt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vibe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6hq0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Joystick" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_5h5q1")
+autoplay = "default"
+frame_progress = 0.772994

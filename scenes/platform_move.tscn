@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqkt8p2s05v8i"]
+
+[ext_resource type="PackedScene" uid="uid://bhnm04dsmnxik" path="res://scenes/plateform.tscn" id="1_p64rk"]
+[ext_resource type="Texture2D" uid="uid://bk716y468olyn" path="res://assets/sprites/platforms.png" id="2_og2ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psbnj"]
+size = Vector2(32, 8)
+
+[node name="Platform_move" type="PathFollow2D"]
+
+[node name="Plateform" parent="." instance=ExtResource("1_p64rk")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Plateform"]
+texture = ExtResource("2_og2ug")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 9)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Plateform"]
+shape = SubResource("RectangleShape2D_psbnj")
+one_way_collision = true

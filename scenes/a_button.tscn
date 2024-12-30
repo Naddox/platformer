@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtwp4lhr7x7yy"]
+
+[ext_resource type="Texture2D" uid="uid://dusjnhlv53y2x" path="res://assets/sprites/gdb-xbox-2.png" id="1_kq83a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcuty"]
+atlas = ExtResource("1_kq83a")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n5kg"]
+atlas = ExtResource("1_kq83a")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06r32"]
+atlas = ExtResource("1_kq83a")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmx3o"]
+atlas = ExtResource("1_kq83a")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlj0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcuty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n5kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06r32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmx3o")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[node name="A_Button" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qlj0l")
+animation = &"pressed"
+autoplay = "pressed"
+frame_progress = 0.74077

@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://cwpy7kjn4c73i"]
+
+[ext_resource type="Texture2D" uid="uid://dhwnk6ls6wbqa" path="res://assets/sprites/gdb-keyboard-2.png" id="1_hgmnc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkemg"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn5p5"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(64, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkbp1"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(96, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c27uc"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(96, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54gj7"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qxcw"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(80, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mwy2"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrin3"]
+atlas = ExtResource("1_hgmnc")
+region = Rect2(80, 272, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vc326"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkemg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wn5p5")
+}],
+"loop": true,
+"name": &"a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkbp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c27uc")
+}],
+"loop": true,
+"name": &"d",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54gj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qxcw")
+}],
+"loop": true,
+"name": &"s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mwy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrin3")
+}],
+"loop": true,
+"name": &"w",
+"speed": 5.0
+}]
+
+[node name="WASD" type="Node2D"]
+
+[node name="w" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_vc326")
+animation = &"w"
+autoplay = "w"
+
+[node name="a" type="AnimatedSprite2D" parent="."]
+position = Vector2(-17, 9)
+sprite_frames = SubResource("SpriteFrames_vc326")
+animation = &"a"
+autoplay = "a"
+
+[node name="s" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 9)
+sprite_frames = SubResource("SpriteFrames_vc326")
+animation = &"s"
+autoplay = "s"
+
+[node name="d" type="AnimatedSprite2D" parent="."]
+position = Vector2(17, 9)
+sprite_frames = SubResource("SpriteFrames_vc326")
+animation = &"d"
+autoplay = "d"
